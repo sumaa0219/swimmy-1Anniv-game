@@ -1,0 +1,88 @@
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* 6列 */
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: rgb(244, 159, 11);
+    /* 背景色を黒に設定 */
+    /* background-image: url('path/to/your/halloween-background-image.jpg'); ハロウィンの背景画像を指定 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    /* テキストの色を白に設定 */
+}
+
+p {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    /* テキストを黒で縁取り */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 10);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 10);
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.card-front {
+    background-color: #ccc;
+    background-image: url('./card_back.png');
+    /* トランプの柄の画像を指定 */
+    background-size: cover;
+}
+
+.card-back {
+    background-color: #ffffff;
+    background-image: url('./card-front.png');
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    transform: rotateY(180deg);
+}
+
+.card.flipped .card-back {
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    /*太文字にする */
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    /* カードがめくられたときの文字の色を指定 */
+}
