@@ -74,15 +74,36 @@ h1 {
     background-color: rgb(0, 0, 0);
     background-image: url('./card-front.png');
     background-size: cover;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    /* 文字色を白に */
     font-size: 70px;
+    font-weight: bold;
+    /* 太文字にする */
+    text-shadow: 4px 4px 0 rgb(0, 0, 0),
+        /* 黒の縁取り */
+        -4px -4px 0 rgb(0, 0, 0),
+        4px -4px 0 rgb(0, 0, 0),
+        -4px 4px 0 rgb(0, 0, 0),
+        4px 0 0 rgb(0, 0, 0),
+        -4px 0 0 rgb(0, 0, 0),
+        0 4px 0 rgb(0, 0, 0),
+        0 -4px 0 rgb(0, 0, 0);
     transform: rotateY(180deg);
 }
 
 .card.flipped .card-back {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    /* 文字色を白に */
     font-size: 70px;
-    /*太文字にする */
-    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    /* カードがめくられたときの文字の色を指定 */
+    font-weight: bold;
+    /* 太文字にする */
+    text-shadow: 4px 4px 0 rgb(0, 0, 0),
+        /* 黒の縁取り */
+        -4px -4px 0 rgb(0, 0, 0),
+        4px -4px 0 rgb(0, 0, 0),
+        -4px 4px 0 rgb(0, 0, 0),
+        4px 0 0 rgb(0, 0, 0),
+        -4px 0 0 rgb(0, 0, 0),
+        0 4px 0 rgb(0, 0, 0),
+        0 -4px 0 rgb(0, 0, 0);
 }
