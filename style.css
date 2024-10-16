@@ -71,16 +71,16 @@ h1 {
 }
 
 .card-back {
-    background-color: #ffffff;
+    background-color: rgb(0, 0, 0);
     background-image: url('./card-front.png');
     background-size: cover;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 70px;
     transform: rotateY(180deg);
 }
 
 .card.flipped .card-back {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 70px;
     /*太文字にする */
     text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
