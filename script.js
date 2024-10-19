@@ -2,6 +2,7 @@ let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
 
+
 function createDeck() {
     const totalCards = 24;
     const exclude = ["Y", "O", "S", "H", "I", "E"]; // 除外する文字
@@ -9,16 +10,19 @@ function createDeck() {
     const deck = [];
 
     exclude.forEach(letter => {
-        deck.push(letter); // 除外する文字1枚追加
+        deck.push(letter); // 除外する文字6枚追加
     });
 
     while (deck.length < totalCards) {
         const randomLetter = letters[Math.floor(Math.random() * letters.length)];
-        deck.push(randomLetter, randomLetter); // 足りない分はランダムに追加
+        if (!deck.includes(randomLetter)) {
+            deck.push(randomLetter, randomLetter); // 足りない分はランダムに追加
+        }
     }
     console.log(deck);
 
-    return deck.sort(() => Math.random() - 0.5); // シャッフル
+    // return deck.sort(() => Math.random() - 0.5); // シャッフル
+    return deck.sort(() => Math.random() - Math.random());
 }
 
 function createCard(letter) {
@@ -67,6 +71,7 @@ function resetBoard() {
 
 function startGame() {
     const deck = createDeck();
+    console.log(deck);
     const board = document.getElementById('game-board');
 
     deck.forEach(letter => {
