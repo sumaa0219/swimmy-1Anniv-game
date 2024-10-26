@@ -5,7 +5,7 @@ let lockBoard = false;
 
 function createDeck() {
     const totalCards = 24;
-    const exclude = ["Y", "O", "S", "H", "I", "E"]; // 除外する文字
+    const exclude = []; // 除外する文字
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('').filter(letter => !exclude.includes(letter));
     const deck = [];
 
